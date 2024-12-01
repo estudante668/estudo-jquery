@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,37 @@
     <title>Estudo Jquery</title>
 </head>
 <body>
-    <p>teste</p>
-    <h1>QUALQUER COISA</h1>
+     <div>
+        <label>Entre com 1 valor: </label>
+        <input type="text" id="valor1" value="0">
+        <br>
+        <label>Entre com 2 valor: </label>
+        <input type="text" id="valor2" value="0">
+        <br>
+         <button type="button" id="btn">JS</button> 
+         <br>
+         <button type="button" id="btn_a">JQ</button> 
+         <br>
+         <label>Resposta: </label>
+         <input type="text" id="res" value="0">
+     </div>
+     <script>
+       
+       $("#btn_a").click(()=>{
+            let v1 = parseInt($("#valor1").val())
+            let v2 = parseInt($("#valor2").val())
+            let soma = v1+v2
+           $("#res").val(soma)
+        })
+        let botao = document.getElementById("btn").addEventListener("click", ()=>{
+            
+            let v1 = document.getElementById("valor1").value; 
+            let v2 = document.getElementById("valor2").value;
+            
+           let soma = parseInt(v1) + parseInt(v2)
+            
+            val = document.getElementById("res").value = soma;
+        });
+     </script>   
 </body>
-<script>
-    $("p").css("color","#0033ff")
-    $("h1").css("color","#0033ff")
-</script>
 </html>
