@@ -20,13 +20,23 @@
     <button id="btn">click</button>
     <p id="texto"></p>
     <script>
-     /* varios eventos para mesmos comportamentos*/
+     /* varios eventos para mesmos comportamentos
      $('#nome').on('keyup click',()=>{
         $('#texto').text($('#nome').val());
         $('#btn').click(()=>{
             $('#texto').text('clicou');
         });
-     });
+     });*/
+
+     /* varios eventos para comportamentos diferentes*/
+     $('#bloco').on({
+        click:()=>{ $('#texto').text('clicou')},
+        mouseenter:()=>{
+            $('#texto').text('entrou no quadrado')
+        }
+     }
+     );
+
     </script>
 </body>
 </html>
