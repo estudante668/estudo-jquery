@@ -5,39 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Estudo Jquery</title>
+    <style>
+      #bloco{
+          width: 200px;
+          height: 200px;
+          background-color: blue;
+      }
+    </style>
 </head>
 <body>
-     <div>
-        <label>Entre com 1 valor: </label>
-        <input type="text" id="valor1" value="0">
-        <br>
-        <label>Entre com 2 valor: </label>
-        <input type="text" id="valor2" value="0">
-        <br>
-         <button type="button" id="btn">JS</button> 
-         <br>
-         <button type="button" id="btn_a">JQ</button> 
-         <br>
-         <label>Resposta: </label>
-         <input type="text" id="res" value="0">
-     </div>
+     <div id="bloco"></div>
+     <p id="texto"></p>
+     
      <script>
-       
-       $("#btn_a").click(()=>{
-            let v1 = parseInt($("#valor1").val())
-            let v2 = parseInt($("#valor2").val())
-            let soma = v1+v2
-           $("#res").val(soma)
-        })
-        let botao = document.getElementById("btn").addEventListener("click", ()=>{
-            
-            let v1 = document.getElementById("valor1").value; 
-            let v2 = document.getElementById("valor2").value;
-            
-           let soma = parseInt(v1) + parseInt(v2)
-            
-            val = document.getElementById("res").value = soma;
-        });
-     </script>   
+          $('#bloco').click(()=>{
+        $('#texto').text('clicado')
+          })
+     </script>
 </body>
 </html>
